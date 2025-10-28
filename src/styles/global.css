@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F5F0E8;
+  --stone: #B8B5AE;
+  --terracotta: #B95F46;
+  --deep-blue: #1D2F4B;
+  --charcoal: #2E2E2E;
+}

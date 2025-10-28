@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+import heroVideo from '../videos/heropage.mp4';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>PAULIŃSKA 16</title>
+	</head>
+	<body class="bg-[var(--cream)] antialiased">
+		
+		<div class="relative h-screen overflow-hidden">
+
+			<video 
+				class="absolute inset-0 w-full h-full object-cover z-10" 
+				src={heroVideo} 
+				autoplay 
+				loop 
+				muted 
+				playsinline
+			>
+				Your browser does not support the video tag.
+			</video>
+
+			<div class="absolute inset-0 bg-[var(--deep-blue)]/75 z-20"></div>
+
+			<header class="absolute top-0 left-0 right-0 p-8 z-30">
+				<nav class="flex justify-between items-center">
+					<div class="text-2xl font-bold text-[var(--cream)]">
+						PAULIŃSKA
+					</div>
+					<ul class="flex gap-6 text-[var(--cream)]">
+						<li><a href="#" class="hover:text-[var(--terracotta)] transition-colors">Home</a></li>
+						<li><a href="#" class="hover:text-[var(--terracotta)] transition-colors">Residences</a></li>
+						<li><a href="#" class="hover:text-[var(--terracotta)] transition-colors">Location</a></li>
+						<li><a href="#" class="hover:text-[var(--terracotta)] transition-colors">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div class="relative h-full flex justify-center items-center z-30">
+				<h1 class="text-7xl font-bold text-[var(--cream)] tracking-wider">
+					PAULIŃSKA 16
+				</h1>
+			</div>
+
+		</div>
+
+		<div class="h-screen bg-[var(--cream)] p-24">
+			<h2 class="text-4xl font-bold text-[var(--charcoal)]">
+				A New Standard of Living
+			</h2>
+			<p class="text-lg text-[var(--charcoal)] mt-4">
+				Details about the property...
+			</p>
+		</div>
+
+	</body>
+</html>
