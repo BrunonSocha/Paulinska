@@ -1,0 +1,47 @@
+<header 
+	id="main-header"
+    class="fixed top-0 left-0 right-0 p-8 z-50 transition-all duration-300 ease-in-out 
+           text-(--cream)" 
+>
+	<nav class="flex justify-between items-center">
+		<a href="/#about" class="text-2xl font-bold logo-hidden hover:text-(--terracotta) transition-colors">
+			PAULIŃSKA
+		</a>
+		<ul class="flex gap-6">
+			<li><a href="/#about" class="hover:text-(--terracotta) transition-colors">O Nas</a></li>
+			<li><a href="/apartments" class="hover:text-(--terracotta) transition-colors">Apartamenty</a></li>
+			<li><a href="/location" class="hover:text-(--terracotta) transition-colors">Lokalizacja</a></li>
+			<li><a href="/contact" class="hover:text-(--terracotta) transition-colors">Kontakt</a></li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+    #main-header {
+        background-color: transparent; 
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .logo-hidden {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .scrolled {
+        background-color: var(--cream) !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    .scrolled .logo-hidden {
+        opacity: 1;
+    }
+
+    .scrolled,
+    .scrolled a {
+        color: var(--deep-blue) !important;
+    }
+    
+    .scrolled a:hover {
+        color: var(--terracotta) !important;
+    }
+</style>

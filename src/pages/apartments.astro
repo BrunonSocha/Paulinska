@@ -1,0 +1,98 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const apartments = [
+	{ id: 'A1', title: 'Mieszkanie A1', area: '25,68 m2', bedrooms: 'Kawalerka', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '590 640,00 zł', status: 'Dostępne' },
+	{ id: 'A2', title: 'Mieszkanie A2', area: '25,02 m2', bedrooms: 'Kawalerka', bathrooms: '1', pricePerSqM: '25 000,00 zł', totalPrice: '625 500,00 zł', status: 'Dostępne' },
+	{ id: 'A3', title: 'Mieszkanie A3', area: '32,07 m2', bedrooms: '1', bathrooms: '1', pricePerSqM: '25 000,00 zł', totalPrice: '801 750,00 zł', status: 'Dostępne' },
+	{ id: 'A4', title: 'Mieszkanie A4', area: '26,00 m2', bedrooms: 'Kawalerka', bathrooms: '1', pricePerSqM: '25 000,00 zł', totalPrice: '650 000,00 zł', status: 'Dostępne' },
+	{ id: 'A5', title: 'Mieszkanie A5', area: '31,74 m2', bedrooms: '1', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '730 020,00 zł', status: 'Dostępne' },
+	{ id: 'A6', title: 'Mieszkanie A6', area: '26,68 m2', bedrooms: 'Kawalerka', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '613 640,00 zł', status: 'Dostępne' },
+	{ id: 'A7', title: 'Mieszkanie A7', area: '30,50 m2', bedrooms: '1', bathrooms: '1', pricePerSqM: '22 500,00 zł', totalPrice: '686 250,00 zł', status: 'Dostępne' },
+	{ id: 'A8', title: 'Mieszkanie A8', area: '38,67 m2', bedrooms: '1', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '889 410,00 zł', status: 'Dostępne' },
+	{ id: 'A9', title: 'Mieszkanie A9', area: '31,54 m2', bedrooms: '1', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '725 420,00 zł', status: 'Dostępne' },
+	{ id: 'A10', title: 'Mieszkanie A10', area: '29,20 m2', bedrooms: 'Kawalerka', bathrooms: '1', pricePerSqM: '23 000,00 zł', totalPrice: '564 960,00 zł', status: 'Dostępne' },
+];
+
+---
+
+<MainLayout title="PAULIŃSKA 16 | Dostępne Apartamenty">
+
+    <div class="pt-24 min-h-screen bg-(--cream) px-8 md:px-24">
+        <header class="py-16 max-w-5xl mx-auto">
+            <h1 class="text-xs font-semibold uppercase text-(--stone) tracking-widest mb-4">
+                Ekskluzywne mieszkania
+            </h1>
+            <h2 class="text-6xl font-serif text-(--deep-blue) leading-tight">
+                Dostępne <span class="text-(--terracotta)">Apartamenty</span>
+            </h2>
+            <p class="mt-6 text-xl text-(--charcoal)">
+                Adaptacja poddasza na apartamenty przy ul. Paulińskiej 16 to wyjątkowa inwestycja zlokalizowana w sercu krakowskiego Kazimierza.
+            </p>
+            <p class="mt-4 text-xl text-(--charcoal)">
+                Prezentujemy 10 nowych apartamentów** o powierzchniach od 25 m2. Każdy z nich łączy w sobie urok starego Krakowa z wygodą miejskiego życia.
+            </p>
+
+            <a 
+                href="/assets/katalog.pdf" 
+                download 
+                class="mt-8 inline-flex items-center bg-(--deep-blue) text-(--cream) px-6 py-3 font-semibold rounded hover:bg-(--terracotta) transition-colors shadow-lg"
+            >
+                <span class="mr-2 text-lg">📄</span>
+                Pobierz Katalog PDF
+            </a>
+        </header>
+        
+        <div class="py-8 max-w-5xl mx-auto mb-16">
+            <div class="bg-white p-6 md:p-10 rounded-lg shadow-xl border-t-8 border-(--terracotta)">
+                <h3 class="text-2xl font-bold text-(--deep-blue) mb-4">
+                    Aktualna Dostępność i Cennik
+                </h3>
+                <div class="w-full h-48 bg-(--stone)/10 flex items-center justify-center border border-dashed border-(--stone)">
+                    <p class="text-lg text-(--deep-blue) font-medium">
+                        [PHP TOOL INTEGRATION POINT: Dynamiczny Cennik]
+                    </p>
+                </div>
+                <p class="mt-4 text-sm text-(--charcoal)">
+                    Ceny są aktualne - (wspomnij o korzystaniu z rozwiązania InfoDevelopment)
+                </p>
+            </div>
+        </div>
+        
+        <div class="py-16 max-w-5xl mx-auto">
+            <div class="space-y-16">
+                {apartments.map((apt) => (
+                    <div class="bg-white p-8 rounded-lg shadow-2xl border border-(--stone)/30" id={apt.id}>
+                        <h3 class="text-3xl font-bold text-(--deep-blue) mb-4">{apt.title}</h3>
+                        
+                        <div class="flex flex-wrap gap-x-8 gap-y-2 text-(--charcoal) mb-6">
+                            <p>Powierzchnia: <span class="font-semibold">{apt.area}</span></p>
+                            <p>Sypialnie: <span class="font-semibold">{apt.bedrooms}</span></p>
+                            <p>Łazienki: <span class="font-semibold">{apt.bathrooms}</span></p>
+                            <p><span class="font-semibold">Cena za m²:</span> {apt.pricePerSqM}</p>
+                        </div>
+
+                        <div class="w-full h-96 bg-(--stone)/20 flex items-center justify-center border border-dashed border-(--stone) mb-6">
+                            <p class="text-(--deep-blue)">Rzut piętra / Wzór dla {apt.id}</p>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pt-2">
+                            <div class="flex flex-col">
+                                <p class="text-sm text-(--charcoal)">Cena całkowita:</p>
+                                <p class="text-3xl font-bold text-(--terracotta)">{apt.totalPrice}</p>
+                                <p class="text-sm text-green-600 font-bold mt-1">Status: {apt.status}</p>
+                            </div>
+                            <a 
+                                href="/contact" 
+                                class="inline-block bg-(--terracotta) text-(--cream) px-6 py-3 font-semibold rounded hover:bg-(--deep-blue) transition-colors"
+                             >
+                                Zapytaj o szczegóły
+                             </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        </div>
+    
+</MainLayout>

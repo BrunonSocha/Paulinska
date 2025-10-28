@@ -1,0 +1,78 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="PAULIŃSKA 16 | Kontakt">
+
+    <div class="pt-24 min-h-screen bg-(--cream) px-8 md:px-24">
+        
+        <header class="py-16 max-w-5xl mx-auto">
+            <h1 class="text-xs font-semibold uppercase text-(--stone) tracking-widest mb-4">
+                Zapytaj Dziś
+            </h1>
+            <h2 class="text-6xl font-serif text-(--deep-blue) leading-tight">
+                Skontaktuj się z <span class="text-(--terracotta)">Zespołem Sprzedaży</span>
+            </h2>
+            <p class="mt-6 text-xl text-(--charcoal)">
+                Jesteśmy gotowi, aby dostarczyć szczegółowe informacje na temat dostępności, cen i możliwości prywatnego umówienia się na prezentację apartamentów w Paulińska 16.
+            </p>
+        </header>
+
+        <section class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start pb-24">
+
+            <div class="lg:col-span-1 space-y-8">
+                
+                <div>
+                    <h3 class="text-xl font-semibold text-(--deep-blue) mb-3">Biuro Sprzedaży</h3>
+                    <address class="text-(--charcoal) not-italic space-y-1">
+                        <p>T: +48 123 456 789</p>
+                        <p>E: contact@paulinaska16.pl</p>
+                    </address>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-(--deep-blue) mb-3">Współpraca Deweloperska:</h3>
+                    <p class="text-(--charcoal) text-sm">
+                        Paulinska Holding (Inwestycje i Zarządzanie)
+                        <br>
+                        Astra Group (Projekt i Budowa)
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-(--deep-blue) mb-3">Dane Dewelopera</h3>
+                    <address class="text-(--charcoal) text-sm not-italic space-y-1">
+                        <p>Inwestycja Paulińska Sp. z o.o.</p>
+                        <p>Starowiślna 82 / 3, 31-035 Kraków, Polska</p>
+                        <p>NIP: 6793248062</p>
+                        <p>REGON: 523089937</p>
+                    </address>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-2 bg-white p-8 rounded-lg shadow-xl border-t-4 border-(--terracotta)">
+                <form action="#" method="POST" class="space-y-4">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Imię i Nazwisko" class="w-full p-3 border border-(--stone)/50 rounded focus:border-(--terracotta) focus:ring-0">
+                        <input type="email" placeholder="Adres E-mail" class="w-full p-3 border border-(--stone)/50 rounded focus:border-(--terracotta) focus:ring-0">
+                    </div>
+                    
+                    <input type="tel" placeholder="Numer Telefonu" class="w-full p-3 border border-(--stone)/50 rounded focus:border-(--terracotta) focus:ring-0">
+                    
+                    <textarea placeholder="Treść Zapytania" rows="6" class="w-full p-3 border border-(--stone)/50 rounded focus:border-(--terracotta) focus:ring-0"></textarea>
+                    
+                    <div class="pt-2">
+                        <button type="submit" class="w-full bg-(--deep-blue) text-(--cream) px-6 py-3 font-semibold rounded hover:bg-(--terracotta) transition-colors">
+                            Wyślij Zapytanie
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+        
+    </div>
+
+</MainLayout>

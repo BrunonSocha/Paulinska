@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 :root {
@@ -10,4 +8,22 @@
   --terracotta: #B95F46;
   --deep-blue: #1D2F4B;
   --charcoal: #2E2E2E;
+}
+
+html {
+  scroll-padding-top: 165px;
+  scroll-behavior: smooth;
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+    z-index: 10; 
+    position: relative;
 }
